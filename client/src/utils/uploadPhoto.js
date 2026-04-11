@@ -2,7 +2,7 @@ const uploadPhoto = async (file) => {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await fetch("http://127.0.0.1:8000/analyze_crop_image", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/analyze_crop_image`, {
     method: "POST",
     body: formData,
   });

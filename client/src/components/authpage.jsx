@@ -38,7 +38,7 @@ export default function AuthPage() {
     // [AUTH DISABLED] }
 
     // [AUTH DISABLED] try {
-    // [AUTH DISABLED]   const url = isLogin ? "http://127.0.0.1:8000/login" : "http://127.0.0.1:8000/signup";
+    // [AUTH DISABLED]   const url = isLogin ? `${import.meta.env.VITE_API_URL}/login` : `${import.meta.env.VITE_API_URL}/signup`;
     // [AUTH DISABLED]   const body = isLogin
     // [AUTH DISABLED]     ? { email: formData.email, password: formData.password }
     // [AUTH DISABLED]     : { username: formData.name, email: formData.email, password: formData.password };
