@@ -41,7 +41,15 @@ export default function ChatBot() {
         throw new Error(`API error: ${response.status}`);
       }
 
-      const data = await response.json();
+      const text = await response.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch (e) {
+        console.error("Received non-JSON response:", text.substring(0, 200));
+        throw new Error("Server returned an invalid response. Check API URL.");
+      }
+      
       const responseText = data.response || "Maaf kijiye, iska jawab mujhe abhi nahi pata. 😅";
 
       setMessages((prev) => [

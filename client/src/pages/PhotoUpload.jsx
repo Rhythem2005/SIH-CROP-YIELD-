@@ -75,11 +75,22 @@ const PhotoUpload = () => {
         method: "POST",
         body: formData,
       });
-      const data = await response.json();
+      
+      const text = await response.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch (e) {
+        console.error("Received non-JSON response:", text.substring(0, 200));
+        throw new Error("Server returned an invalid response. Check API URL.");
+      }
+      
+      if (!response.ok) throw new Error(data.error || "Server Error");
+      
       navigate("/photo-result", { state: { resultData: data.result } });
     } catch (error) {
       console.error("Upload failed:", error);
-      alert(t("upload.alertFailed"));
+      alert(t("upload.alertFailed") + ": " + error.message);
     }
   };
 
