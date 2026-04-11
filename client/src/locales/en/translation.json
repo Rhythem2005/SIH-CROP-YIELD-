@@ -1,0 +1,260 @@
+{
+  "appName": "FarmWise",
+  "welcome": "Welcome to our website!",
+  "getStarted": "Get Started →",
+
+  "chooseRole": {
+    "title": "Choose Your Role",
+    "subtitle": "Select how you'd like to use FarmWise. You can always switch between roles later.",
+    "farmer": {
+      "title": "I'm a Farmer",
+      "description": "List and sell your crops directly to buyers. Manage your farm business with our tools.",
+      "features": [
+        "List your crops and set prices",
+        "Manage orders and deliveries",
+        "Track earnings and analytics",
+        "Connect with verified buyers"
+      ],
+      "continue": "Continue as Farmer"
+    },
+    "buyer": {
+      "title": "I'm a Buyer",
+      "description": "Browse and purchase fresh produce directly from local farmers. Get the best deals.",
+      "features": [
+        "Browse fresh local produce",
+        "Compare prices and quality",
+        "Secure payment and delivery",
+        "Rate and review farmers"
+      ],
+      "continue": "Continue as Buyer"
+    }
+  },
+
+  "hero": {
+    "heroTitle": "Smarter Farming with",
+    "heroHighlight": "AI-Powered Yield Prediction",
+    "heroDescription": "Monitor your crops, analyze soil, and boost productivity with AI insights. Make data-driven decisions for a more sustainable and profitable harvest.",
+    "manualButton": "Add Data →",
+    "uploadButton": "Upload Photo →",
+    "marketplaceButton": "Go to Marketplace →",
+    "transformTitle": "Transform Your Farming Experience",
+    "transformDescription": "Choose how you want to interact with our AI-powered platform. From manual data entry to photo-based analysis, get accurate yield predictions and actionable insights.",
+    "cardManualTitle": "Manual Data Entry",
+    "cardManualDesc": "Enter soil, crop, and weather data manually for precise analysis and tailored insights.",
+    "cardPhotoTitle": "Photo Analysis",
+    "cardPhotoDesc": "Upload images of crops or soil for instant AI-powered health and condition checks.",
+    "cardYieldTitle": "Yield Predictions",
+    "cardYieldDesc": "Get accurate predictions of crop yield based on your provided data or uploaded photos.",
+    "cardMarketplaceTitle": "Marketplace",
+    "cardMarketplaceDesc": "Explore the marketplace to access farming tools, seeds, fertilizers, and more."
+  },
+
+  "dashboardTitle": "Farm Dashboard",
+  "dashboardDescription": "Choose how you want to provide your farm data for AI-powered yield prediction and insights.",
+
+  "manualTitle": "Manual Data Entry",
+  "manualDescription": "Enter soil conditions, crop types, weather data, and farming practices manually. Perfect for detailed analysis and when you have specific data points to input.",
+  "manualPoints": {
+    "soil": "Soil pH, moisture, and nutrient levels",
+    "crops": "Crop varieties and planting dates",
+    "weather": "Weather patterns and irrigation data"
+  },
+  "manualButton": "Add Data →",
+
+  "uploadTitle": "Photo Upload for Analysis",
+  "uploadDescription": "Upload crop or soil images for instant AI-powered analysis. Our computer vision technology will assess plant health, growth stages, and potential issues.",
+  "uploadPoints": {
+    "health": "Crop health and disease detection",
+    "growth": "Growth stage identification",
+    "soil": "Soil condition assessment"
+  },
+  "uploadButton": "Upload Photo →",
+
+  "dashboardStatsTitle": "Your Farm Statistics",
+  "dashboardStatsDescription": "Track your farm’s performance and yield predictions.",
+  "dashboardOptionManual": "Enter Data Manually",
+  "dashboardOptionUpload": "Upload Crop/Soil Photos",
+  "dashboardOptionHistory": "View Past Records",
+
+  "inputDataTitle": "Input Data",
+  "soilDataTitle": "Soil Data",
+  "soilType": "Soil Type",
+  "phLevel": "pH Level",
+  "phOptimalRange": "Optimal range: 6.0–8.0 for most crops",
+
+  "nutrientsTitle": "Nutrients (NPK)",
+  "nitrogen": "Nitrogen (N)",
+  "phosphorus": "Phosphorus (P)",
+  "potassium": "Potassium (K)",
+
+  "locationWeatherTitle": "Location & Weather",
+  "state": "State",
+  "weatherNote": "Weather data will be auto-fetched via API",
+
+  "fertilizerPesticide": "Fertilizer & Pesticide",
+  "fertilizerType": "Fertilizer Type",
+  "fertilizerAmount": "Fertilizer Amount",
+  "pesticideAmount": "Pesticide Amount",
+  "loadingWeather": "Fetching Weather...",
+  "analyzeData": "Analyze Data →",
+
+  "soilTypes": {
+    "Sandy": "Sandy",
+    "Loamy": "Loamy",
+    "Clay": "Clay",
+    "Red": "Red",
+    "Alluvial": "Alluvial"
+  },
+
+  "fertilizerTypes": {
+    "Organic": "Organic",
+    "Inorganic": "Inorganic"
+  },
+
+  "crops": {
+    "Rice": "Rice",
+    "Wheat": "Wheat",
+    "Maize": "Maize",
+    "Cotton": "Cotton",
+    "Sugarcane": "Sugarcane",
+    "Barley": "Barley",
+    "Jowar": "Jowar",
+    "Bajra": "Bajra"
+  },
+
+  "alert": {
+    "backendError": "Failed to connect to backend. Make sure FastAPI is running."
+  },
+
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "createAccount": "Create an Account",
+    "loginSubtitle": "Login to continue your smart farming journey 🚜🌱",
+    "signupSubtitle": "Join the smarter farming community 🌱🚜",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "passwordPlaceholder": "Password",
+    "confirmPasswordPlaceholder": "Confirm Password",
+    "loginButton": "Login",
+    "signupButton": "Sign Up",
+    "loginSuccess": "Login successful! 🎉",
+    "signupSuccess": "Signup successful! Please login.",
+    "noAccount": "Don’t have an account?",
+    "alreadyAccount": "Already have an account?",
+    "signupLink": "Sign Up",
+    "loginLink": "Login"
+  },
+
+  "upload": {
+    "backToHome": "← Back to Home",
+    "headerTitle": "Photo Analysis",
+    "headerSubtitle": "Upload crop or soil images for AI-powered insights",
+    "uploadTitle": "Upload Your Photos",
+    "dragDrop": "Drag and drop",
+    "or": "or",
+    "clickBrowse": "Browse files",
+    "supportedFormats": "Supported formats: JPG, PNG, WEBP • Max size: 10MB per image",
+    "previewTitle": "Image Preview",
+    "noImages": "No images uploaded yet",
+    "noImagesSubtitle": "Upload photos to see preview and analysis",
+    "processButton": "Process Photos →",
+
+    "analysisTitle": "What Our AI Analyzes",
+    "analysisHealthTitle": "Crop Health",
+    "analysisHealthDesc": "Detects plant health, leaf color, and common diseases.",
+    "analysisYieldTitle": "Yield Potential",
+    "analysisYieldDesc": "Estimates expected yield based on plant condition and growth stage.",
+    "analysisRecoTitle": "Recommendations",
+    "analysisRecoDesc": "Provides suggestions for fertilizer, irrigation, and pest control."
+  },
+
+  "dataTips": {
+    "title": "Smart Data Entry Tips",
+    "ph": {
+      "title": "pH Levels",
+      "optimal": "Green = Optimal (6.0–8.0)",
+      "caution": "Yellow = Caution (5.5–6.0, 8.0–8.5)",
+      "critical": "Red = Critical (<5.5, >8.5)"
+    },
+    "humidity": {
+      "title": "Humidity",
+      "good": "Blue = Good (40–80%)",
+      "bad": "Red = Too dry/humid",
+      "note": "Affects disease risk"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "good": "Orange = Good (15–35°C)",
+      "bad": "Red = Extreme temps",
+      "note": "Seasonal average recommended"
+    },
+    "npk": {
+      "title": "NPK Format",
+      "desc": "Nitrogen-Phosphorus-Potassium",
+      "example": "Example: 20-10-10",
+      "note": "Higher N for leafy crops"
+    }
+  },
+
+  "resultPage": {
+    "noData": "⚠️ No result data available.",
+  "goBack": "Go Back",
+  "title": "🌱 Crop Yield Prediction",
+  "subtitle": "Insights and recommendations for your farm.",
+  "cropChosen": "🌾 Selected Crop",
+  "location": "📍 Location",
+  "temperature": "🌡️ Temperature",
+  "humidity": "💧 Humidity",
+  "conditions": "☀️ Conditions",
+  "sowingDate": "📅 Sowing Date",
+  "predictedYield": "📊 Predicted Yield",
+  "totalProduction": "🏭 Total Production",
+  "recommendations": "📋 Recommendations",
+  "backHome": "🔙 Back to Home"
+  },
+
+  "photoResult": {
+    "noResult": "⚠️ No image analysis result available.",
+    "goBack": "Go Back",
+    "header": "Crop Health Analysis Result",
+    "subHeader": "Detailed analysis of your uploaded crop image",
+    "healthScore": "Health Score",
+    "healthy": "Healthy",
+    "healthyLeaves": "Healthy Leaves",
+    "yellowLeaves": "Yellow Leaves",
+    "brownSpots": "Brown Spots",
+    "diagnosis": "Diagnosis",
+    "recommendations": "Recommendations",
+    "uploadAnother": "Upload Another Photo"
+  },
+
+    "insuranceRole": {
+    "title": "Choose Your Insurance Option",
+    "subtitle": "Select how you'd like to use our insurance services. You can always switch between options later.",
+
+    "recommendations": {
+      "title": "Insurance Recommendations",
+      "description": "Get personalized insurance recommendations based on your farm, crops, and risk factors using AI-powered analysis.",
+      "features": [
+        "AI-powered policy suggestions",
+        "Compare coverage options",
+        "Estimate loss protection",
+        "Quick apply process"
+      ],
+      "continue": "Continue to Recommendations"
+    },
+
+    "claims": {
+      "title": "Claim Insurance",
+      "description": "Submit and track your insurance claims easily with real-time processing and faster settlements.",
+      "features": [
+        "Easy claim submission",
+        "Upload documents and details",
+        "Track claim status",
+        "Faster approval & settlement"
+      ],
+      "continue": "Continue to Claims"
+    }
+  }
+
+}
