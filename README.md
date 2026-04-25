@@ -2,7 +2,7 @@
 
 AgroAI is a smart agricultural platform designed to help farmers make data-driven decisions. By combining machine learning for crop yield prediction, computer vision for plant health analysis, and an AI chatbot for farming advice, AgroAI provides actionable, localized insights to maximize productivity and minimize crop loss.
 
-## Features
+## Features hhhh
 
 - **Crop Yield Prediction**: Estimates crop yield using a trained XGBoost model, taking into account soil nutrients (N, P, K, pH), rainfall, and live weather data.
 - **Disease & Health Analysis**: Upload leaf images to instantly detect signs of nitrogen deficiency, fungal diseases, or drought stress via OpenCV color ratio analysis.
