@@ -3,13 +3,6 @@
 
 > AI-powered agriculture platform for crop yield prediction, crop health analysis, and smart farming assistance using Machine Learning, Computer Vision, and Generative AI.
 
-![React](https://img.shields.io/badge/Frontend-React%20(Vite)-61DAFB?logo=react&logoColor=white)
-![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
-![XGBoost](https://img.shields.io/badge/ML-XGBoost-orange)
-![OpenCV](https://img.shields.io/badge/Vision-OpenCV-red?logo=opencv)
-![Gemini](https://img.shields.io/badge/AI-Gemini-blueviolet)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
 ## Overview
 
 AgroAI is a full-stack intelligent farming platform that assists farmers in making data-driven agricultural decisions. It combines machine learning, computer vision, and generative AI to predict crop yield, analyze plant health, provide farming recommendations, and connect farmers directly with buyers.
