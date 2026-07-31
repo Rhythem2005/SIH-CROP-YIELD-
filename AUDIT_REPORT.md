@@ -47,8 +47,8 @@ export const API_ENDPOINTS = {
 **Severity**: 🔴 CRITICAL
 
 **Files Affected**:
-- `client/.env`: `VITE_REACT_APP_GEMINI_KEY=AIzaSyAG4098q7LhRGbfxqMXp_Q6kJK5Fp91Ua0`
-- `server/.env`: `GEMINI_KEY=AIzaSyDDsqF7TiHy_1Iit2j015fxEEhhzF63mAM`
+- `client/.env`: `VITE_REACT_APP_GEMINI_KEY=your_gemini_api_key_here`
+- `server/.env`: `GEMINI_KEY=your_gemini_api_key_here`
 
 **Impact**: API keys visible in git, anyone can abuse and cost = 💀
 
