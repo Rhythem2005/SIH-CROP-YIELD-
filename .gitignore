@@ -23,3 +23,9 @@ yarn-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Internal / Preparation Docs
+AUDIT_REPORT.md
+DEPLOYMENT.md
+INTERVIEW_PREPARATION.md
+
