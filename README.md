@@ -1,96 +1,142 @@
-````markdown
 # 🌾 AgroAI
 
-> AI-powered agriculture platform for crop yield prediction, crop health analysis, and smart farming assistance using Machine Learning, Computer Vision, and Generative AI.
+[![React](https://img.shields.io/badge/Frontend-React%20%28Vite%29-blue.svg?logo=react&logoColor=white)](https://react.dev/)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Language-Python%203.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![XGBoost](https://img.shields.io/badge/ML-XGBoost-orange.svg?logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
+[![OpenCV](https://img.shields.io/badge/CV-OpenCV-red.svg?logo=opencv&logoColor=white)](https://opencv.org/)
+[![Gemini](https://img.shields.io/badge/AI-Gemini%202.0-blueviolet.svg?logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/Rhythem2005/SIH-CROP-YIELD-?style=social)](https://github.com/Rhythem2005/SIH-CROP-YIELD-/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Rhythem2005/SIH-CROP-YIELD-)](https://github.com/Rhythem2005/SIH-CROP-YIELD-/commits)
 
-AgroAI is a full-stack intelligent farming platform that assists farmers in making data-driven agricultural decisions. It combines machine learning, computer vision, and generative AI to predict crop yield, analyze plant health, provide farming recommendations, and connect farmers directly with buyers.
-
----
-
-## Features
-
-- 🌱 Crop Yield Prediction using XGBoost
-- 📷 Leaf Disease & Nutrient Deficiency Analysis using OpenCV
-- 🤖 AI Farming Assistant powered by Gemini
-- 🛒 Farmer-to-Buyer Marketplace
-- 📄 PDF Report Generation
-- 🌦️ Live Weather Integration
-- 🌐 English & Hindi Language Support
+AgroAI is a smart agricultural platform that helps farmers make data-driven decisions. It combines machine learning for crop yield prediction, computer vision for plant health analysis, and an AI chatbot for farming advice — delivering actionable, localized insights that maximize productivity, prevent crop loss, and enable peer-to-peer produce trade.
 
 ---
 
-## Tech Stack
+## 🌟 Key Features
+
+- 📊 **Crop Yield Prediction**: Estimates crop yield using a trained **XGBoost model**, factoring in soil nutrients (N, P, K, pH), rainfall, and live weather data fetched automatically.
+- 🔍 **Disease & Health Analysis**: Upload a leaf image to instantly detect nitrogen deficiency, fungal disease, or drought stress via **OpenCV color-ratio (HSV) analysis**.
+- 🌾 **Kisan Mitra Chatbot**: A friendly farming assistant powered by Google's **Gemini AI**, answering agricultural questions in English, Hindi, and Hinglish.
+- 🛍️ **P2P Marketplace**: Connects farmers directly with buyers — farmers list crops and set prices, buyers browse local, fresh produce.
+- 🛡️ **Smart Insurance & Claims**: Get customized crop insurance recommendations and submit claims based on yield predictions and weather hazards.
+- 📋 **Economic Reports**: Generate downloadable PDF reports summarizing soil conditions, predicted yield, weather forecast, and tailored farming tips.
+- 🌐 **Multilingual Support**: Switch seamlessly between English and Hindi for a localized, inclusive user experience.
+
+---
+
+## 🏗️ Tech Stack
 
 | Layer | Technologies |
 |--------|--------------|
-| Frontend | React (Vite), Tailwind CSS |
-| Backend | FastAPI, Python |
-| Machine Learning | XGBoost, Scikit-learn, Pandas, NumPy |
-| Computer Vision | OpenCV |
-| AI | Google Gemini 2.0 Flash |
-| APIs | OpenWeather API |
+| **Frontend** | React (Vite), Tailwind CSS, Lucide Icons |
+| **Backend** | FastAPI, Uvicorn, Python 3.10+ |
+| **Machine Learning** | XGBoost, Scikit-learn, Pandas, NumPy |
+| **Computer Vision** | OpenCV (HSV color-space segmentation) |
+| **AI Integration** | Google Gemini 2.0 Flash |
+| **External APIs** | OpenWeather API |
 
 ---
 
-## Architecture
+## 📐 Architecture & Diagrams
+
+The diagrams below outline AgroAI's system architecture, feature map, and API lifecycle.
+
+### 1. High-Level System Architecture
 
 ```text
-                    AgroAI
-
-      React (Vite) Frontend
-               │
-          REST API
-               │
-        FastAPI Backend
-      ├── XGBoost Model
-      ├── OpenCV Analysis
-      ├── Gemini AI
-      └── Weather API
+                                  AgroAI Platform Architecture
+                                  
+     ┌──────────────────────────────────────────────────────────────────────────────────┐
+     │                                React (Vite) Frontend                              │
+     └────────────────────────────────────────┬─────────────────────────────────────────┘
+                                              │ REST API
+                                              ▼
+     ┌──────────────────────────────────────────────────────────────────────────────────┐
+     │                                 FastAPI Backend                                  │
+     └───┬─────────────────────┬───────────────────────┬──────────────────────┬─────────┘
+         │                     │                       │                      │
+         ▼                     ▼                       ▼                      ▼
+┌──────────────────┐  ┌──────────────────┐  ┌────────────────────┐  ┌────────────────────┐
+│  XGBoost Model   │  │ OpenCV Analysis  │  │  Gemini 2.0 AI     │  │  OpenWeather API   │
+│ (Yield Predict)  │  │ (Leaf Diagnosis) │  │ (Kisan Mitra Chat) │  │  (Live Data Fetch) │
+└──────────────────┘  └──────────────────┘  └────────────────────┘  └────────────────────┘
 ```
 
----
-
-## Project Structure
-
-```text
-AgroAI/
-│
-├── client/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── server/
-│   ├── app.py
-│   ├── models/
-│   ├── utils/
-│   ├── requirements.txt
-│   └── .env.example
-│
-└── README.md
-```
-
----
-
-## Workflow
+### 2. Platform Feature Map
 
 ```mermaid
-flowchart LR
-A[User Input] --> B[React Frontend]
-B --> C[FastAPI Backend]
-C --> D[XGBoost Prediction]
-C --> E[OpenCV Analysis]
-C --> F[Gemini AI]
-D --> G[Results Dashboard]
-E --> G
-F --> G
+graph TD
+    Root[🌾 AgroAI Platform] --> FarmerPortal[🧑‍🌾 Farmer Portal]
+    Root --> BuyerPortal[🛒 Buyer Portal]
+    Root --> KisanMitra[💬 Kisan Mitra Chatbot]
+
+    subgraph Farmer [Farmer Modules]
+        FarmerPortal --> YieldPred[📊 Yield Prediction]
+        FarmerPortal --> LeafDiag[🔍 OpenCV Leaf Diagnosis]
+        FarmerPortal --> CropList[➕ Crop Listing for Sale]
+        FarmerPortal --> Insure[🛡️ Smart Crop Insurance & Claims]
+        FarmerPortal --> Econ[📈 Economic Analysis & Reports]
+    end
+
+    subgraph Buyer [Buyer Modules]
+        BuyerPortal --> Market[🛍️ P2P Produce Marketplace]
+        BuyerPortal --> Purchase[💳 Direct Procurement]
+    end
+```
+
+### 3. API Execution Lifecycle
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as 🧑‍🌾 Farmer
+    participant Client as 💻 React Frontend
+    participant Server as ⚡ FastAPI Backend
+    participant Weather as 🌤️ OpenWeather API
+    participant Model as 🤖 XGBoost ML Model
+
+    User->>Client: Enters Soil Data (N, P, K, pH) & State
+    Client->>Server: POST /predict_yield (Payload)
+    activate Server
+    Server->>Weather: Get live weather for State
+    Weather-->>Server: Return Temp, Humidity, Rainfall
+    Server->>Server: Preprocess & Code Categorical Data
+    Server->>Model: Run prediction (DMatrix format)
+    Model-->>Server: Return predicted yield (kg/ha)
+    Server->>Server: Compute Total Production & Recommendations
+    Server-->>Client: Return JSON (Yield, Weather details, Recommendations)
+    deactivate Server
+    Client-->>User: Displays Dashboard stats & PDF actions
 ```
 
 ---
 
-## Getting Started
+## 📂 Project Structure
+
+```text
+SIH-CROP-YIELD-/
+├── client/                     # React Frontend (Vite)
+│   ├── src/                    # Components, pages, context, & styles
+│   ├── public/                 # Static assets
+│   ├── package.json            # Node dependencies
+│   └── vite.config.js          # Vite configuration
+│
+├── server/                     # FastAPI Backend
+│   ├── app.py                  # Core REST API endpoints & route handlers
+│   ├── crop_yield_model.json   # Pre-trained XGBoost ML model
+│   ├── requirements.txt        # Python dependencies
+│   └── .env.example            # Environment template
+│
+├── INTERVIEW_PREPARATION.md    # Comprehensive interview prep guide
+└── README.md                   # Project documentation
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Clone the Repository
 
@@ -104,6 +150,7 @@ cd SIH-CROP-YIELD-
 ```bash
 cd server
 
+# Create and activate virtual environment
 python -m venv venv
 
 # Linux / macOS
@@ -112,18 +159,17 @@ source venv/bin/activate
 # Windows
 venv\Scripts\activate
 
+# Install dependencies
 pip install -r requirements.txt
 
+# Configure environment variables
 cp .env.example .env
 
+# Start FastAPI server
 uvicorn app:app --reload
 ```
 
-Backend runs at:
-
-```
-http://127.0.0.1:8000
-```
+Backend runs at `http://127.0.0.1:8000`
 
 ---
 
@@ -132,26 +178,24 @@ http://127.0.0.1:8000
 ```bash
 cd client
 
+# Install dependencies
 npm install
 
+# Start development server
 npm run dev
 ```
 
-Frontend runs at:
-
-```
-http://localhost:5173
-```
+Frontend runs at `http://localhost:5173`
 
 ---
 
-## Environment Variables
+## 🔑 Environment Variables
 
 ### Server (`server/.env`)
 
 ```env
-GEMINI_KEY=your_key
-OPENWEATHER_KEY=your_key
+GEMINI_KEY=your_gemini_api_key
+OPENWEATHER_KEY=your_openweather_api_key
 ALLOWED_ORIGINS=http://localhost:5173
 ```
 
@@ -159,42 +203,40 @@ ALLOWED_ORIGINS=http://localhost:5173
 
 ```env
 VITE_API_URL=http://127.0.0.1:8000
-VITE_OPENWEATHER_KEY=your_key
+VITE_OPENWEATHER_KEY=your_openweather_api_key
 ```
 
 ---
 
-## API Endpoints
+## 📡 API Endpoints Summary
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| POST | `/predict_yield` | Predict crop yield |
-| POST | `/analyze_crop_image` | Analyze crop health |
-| POST | `/api/chat` | AI farming chatbot |
+| `POST` | `/predict_yield` | Predicts crop yield from soil nutrients & state weather |
+| `POST` | `/analyze_crop_image` | Diagnoses plant leaf health using OpenCV color masks |
+| `POST` | `/api/chat` | AI chatbot powered by Google Gemini 2.0 Flash |
 
 ---
 
-## Future Improvements
+## 💡 Developer Notes
 
-- User Authentication
-- CNN-based Disease Detection
-- Cloud Deployment
-- Mobile Application
-- Historical Analytics Dashboard
-
----
-
-## License
-
-This project is licensed under the **MIT License**.
+> [!IMPORTANT]
+> **Authentication**: The JWT-based authentication system is currently bypassed in `app.py` for testing simplicity and faster local validation.
+>
+> **Model Path**: The trained `crop_yield_model.json` file must exist in the root of the `server/` directory for `/predict_yield` requests to resolve successfully.
+>
+> **Computer Vision**: Leaf disease/health analysis relies on color mapping and threshold masking (HSV ratios) rather than a deep learning Convolutional Neural Network (CNN). It provides a fast, client-friendly color approximation.
 
 ---
 
-## Author
+## 📄 License
 
-**Rhythem**
+This project is licensed under the [MIT License](LICENSE) — free to use, modify, and build on.
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
-````
+---
 
-essive documentation.
+<div align="center">
+
+Built with ❤️ by <a href="https://github.com/Rhythem2005">Rhythem</a>
+
+</div>
